@@ -1,14 +1,14 @@
 import pandas as pd
 
 # Load the dataset
-file_path = '/Users/prabha/Documents/capstone/Data-Analytics-Capstone/fao_data_land_data.csv'  # Replace with your file path
+file_path = '/Users/prabha/Documents/capstone/Data-Analytics-Capstone/fao_data_land_data.csv'  
 land_df = pd.read_csv(file_path)
 
 # Ensure 'year' column is in integer format
 land_df['year'] = pd.to_numeric(land_df['year'], errors='coerce').astype('Int64')
 
 # Check for missing values in important fields
-important_columns = ['country_or_area', 'year', 'value', 'category']  # Replace with actual column names as needed
+important_columns = ['country_or_area', 'year', 'value', 'category']  
 missing_values = land_df[important_columns].isnull().sum()
 
 # Display the count of missing values per important column
@@ -27,7 +27,7 @@ print(missing_values_cleaned)
 print("\nData type of 'year' column:", land_df_cleaned['year'].dtype)
 
 # Save the cleaned dataset to a new CSV file
-cleaned_file_path = '/Users/prabha/Documents/capstone/Data-Analytics-Capstone/cleaned_fao_data_land_data.csv'  # Specify a path for the cleaned file
+cleaned_file_path = '/Users/prabha/Documents/capstone/Data-Analytics-Capstone/cleaned_fao_data_land_data.csv'  
 land_df_cleaned.to_csv(cleaned_file_path, index=False)
 
 # Get the number of rows and columns
