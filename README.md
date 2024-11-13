@@ -13,3 +13,13 @@ site
 # Phases of the Research
 ![alt text](<Phases of the Research.png>)
 
+# Getting Started
+* Begin by creating a folder to house your information.
+* This folder should contain all data that was found and will eventually be where you store the notebook.
+* For organizational purposes, all data has been stored in the Data folder.
+* After getting the data and performing cleaning operations, create a virtual environment within your repository.
+* Type python -m venv .venv in your terminal to setup a virtual environment.
+* To activate the virtual environment type .venv\Scripts\activate in the terminal.
+* After creating the virtual environment use pip install -r requirements.txt in the terminal.
+* Once there, type jupyter lab in the terminal. If a browser does not automatically pop up, use CTRL + Click on the link provided.
+
