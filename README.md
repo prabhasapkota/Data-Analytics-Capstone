@@ -72,7 +72,6 @@ The initial EDA across the three datasets provided critical insights into trends
 * Production Indices
 The data indicates variability in agricultural production indices across different countries and years. Categories such as "Crops" and "Livestock" showed distinct trends over time. Top-producing countries demonstrate consistent growth, but variability exists in smaller economies.
 ![alt text](<Visualizations for Production Datasets.png>)
-![alt text](<Visualizations for Land Use Datasets.png>)
 * Land Use
 The majority of land use categories, such as "Agricultural Land" and "Forest Land," display clear regional patterns. The relationship between land use categories and production indices suggests opportunities to optimize land utilization. Temporal trends reveal shifts in land use patterns, potentially linked to policy changes or climate factors.
 ![alt text](<Visualizations for Land Use Datasets.png>)
@@ -80,7 +79,7 @@ The majority of land use categories, such as "Agricultural Land" and "Forest Lan
 Fertilizer use varies significantly by country and category. Nitrogen-based fertilizers dominate usage in most regions.
 There’s a noticeable increase in fertilizer usage in emerging economies over the analyzed period, potentially driving productivity gains. Outlier analysis identified certain countries with extreme levels of fertilizer application, warranting further investigation.
 ![alt text](<Visualizations for Fertilizer Datasets.png>)
-* Visual Presentation Highlights
+* Visual Presentation Highlights:
 The EDA was supported by impactful visualizations that reveal the underlying structure of the data.
 * Line Plots
 Time-series visualizations of fertilizer usage and production indices showcased trends and seasonality. Adjustments to x-axis ticks ensured clarity for datasets with extensive temporal data.
