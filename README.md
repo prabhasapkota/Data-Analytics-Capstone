@@ -27,7 +27,10 @@ site
 Data was downloaded directly from Kaggle Datasets in csv format. You can find the original datasets here http://data.un.org/Explorer.aspx. The datasets are downloaded directly from Kaggle in csv format. Each file has a table format with rows and columns where each row represents a unique record and each column represents a different data attribute (e.g., country, year, element, value). After that, datatsets are uploaded in the VS Code and then pushed to GitHub repository.
 
 # Data Cleaning
-he three datasets i.e. Population indices, land and fertilizer had missing values in critical fields such year and value. I used the \verb|dropna()| method in pandas to remove rows with missing data. The value field is numerical and central to analysis for these three datasets, while year is essential for any temporal trends. Including rows with missing data in these fields could lead to incomplete or misleading analysis, so it’s safer to exclude them, which has been identified and removed by running Python script within VsCode. In addition to this, the year column is  set to an integer format across all datasets. Python script was ran to check for duplicate. Duplicates was found only for production datasets which was dropped. After handling the missing values, checking integer format and identifying and dropping duplicates, the  cleaned datasets has been saved separately as you can see in GitHub repository \url{https://github.com/prabhasapkota/Data-Analytics-Capstone}. 
+The three datasets i.e. Population indices, land and fertilizer had missing values in critical fields such year and value. I used the \verb|dropna()| method in pandas to remove rows with missing data. The value field is numerical and central to analysis for these three datasets, while year is essential for any temporal trends. Including rows with missing data in these fields could lead to incomplete or misleading analysis, so it’s safer to exclude them, which has been identified and removed by running Python script within VsCode. In addition to this, the year column is  set to an integer format across all datasets. Python script was ran to check for duplicate. Duplicates was found only for production datasets which was dropped. After handling the missing values, checking integer format and identifying and dropping duplicates, the  cleaned datasets has been saved separately as you can see in GitHub repository \url{https://github.com/prabhasapkota/Data-Analytics-Capstone}. 
+![alt text](Production_indices.png)
+![alt text](land_data.png)
+![alt text](fertilizers_data.png)
 
 # Data attributes and records
 After the cleaning process the three datasets has following rows and columns:
@@ -68,11 +71,15 @@ Data types were converted where needed, especially ensuring the year column was 
 The initial EDA across the three datasets provided critical insights into trends, patterns, and distributions. 
 * Production Indices
 The data indicates variability in agricultural production indices across different countries and years. Categories such as "Crops" and "Livestock" showed distinct trends over time. Top-producing countries demonstrate consistent growth, but variability exists in smaller economies.
+![alt text](<Visualizations for Production Datasets.png>)
+![alt text](<Visualizations for Land Use Datasets.png>)
 * Land Use
 The majority of land use categories, such as "Agricultural Land" and "Forest Land," display clear regional patterns. The relationship between land use categories and production indices suggests opportunities to optimize land utilization. Temporal trends reveal shifts in land use patterns, potentially linked to policy changes or climate factors.
+![alt text](<Visualizations for Land Use Datasets.png>)
 * Fertilizer Use
 Fertilizer use varies significantly by country and category. Nitrogen-based fertilizers dominate usage in most regions.
 There’s a noticeable increase in fertilizer usage in emerging economies over the analyzed period, potentially driving productivity gains. Outlier analysis identified certain countries with extreme levels of fertilizer application, warranting further investigation.
+![alt text](<Visualizations for Fertilizer Datasets.png>)
 * Visual Presentation Highlights
 The EDA was supported by impactful visualizations that reveal the underlying structure of the data.
 * Line Plots
@@ -85,3 +92,5 @@ Insights into variations across countries highlighted disparities in land use ef
 The findings from the EDA were contextualized within the broader narrative of sustainable agriculture: 
 Patterns in land use and fertilizer application point to opportunities for policy interventions to minimize waste and improve sustainability.
 Temporal trends highlight the impact of global efforts to enhance agricultural efficiency through technological advancements and resource management.
+
+## Predictive Analysis
