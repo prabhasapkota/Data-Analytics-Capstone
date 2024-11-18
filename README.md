@@ -11,7 +11,7 @@ Food and Agricultural Statistics datasets to uncover insights into fertilizer ap
 site 
 
 # Phases of the Research
-![alt text](<Phases of the Research.png>)
+![alt text](<images/Phases of the Research.png>)
 
 # Getting Started
 * Begin by creating a folder to house your information.
