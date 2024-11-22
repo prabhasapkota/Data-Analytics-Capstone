@@ -82,7 +82,7 @@ Fertilizer use varies significantly by country and category. Nitrogen-based fert
 There’s a noticeable increase in fertilizer usage in emerging economies over the analyzed period, potentially driving productivity gains. Outlier analysis identified certain countries with extreme levels of fertilizer application, warranting further investigation.
 ![alt text](<images/Visualizations for Fertilizer Datasets.png>)
 
-* Visual Presentation Highlights
+* Visual Presentation Highlights:
 The EDA was supported by impactful visualizations that reveal the underlying structure of the data.
 * Line Plots
 Time-series visualizations of fertilizer usage and production indices showcased trends and seasonality. Adjustments to x-axis ticks ensured clarity for datasets with extensive temporal data.
