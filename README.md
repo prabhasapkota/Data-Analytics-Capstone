@@ -96,3 +96,30 @@ Patterns in land use and fertilizer application point to opportunities for polic
 Temporal trends highlight the impact of global efforts to enhance agricultural efficiency through technological advancements and resource management.
 
 ## Predictive Analysis
+Predictive Analysis was carried out by performing following steps:
+1. Load and Inspect the Data
+![alt text](<Load and Inspect the Data.png>)
+2. Merge Datasets
+![alt text](<Merge Datasets.png>)
+3. Feature Engineering 
+![alt text](<Feature Engineering.png>)
+4. Train-Test Split
+![alt text](<Train-Test Split.png>)
+
+### Goal 1: Optimize Farm Input Usage
+Used a regression model to predict productivity based on fertilizer and land use.
+Prior to use a regressison model merged datasets was checked for NaN or infinite values, and NaNs were filled with the median value of each column. Then values were clipped to a reasonable range to address any outliers or excessively large values that could distort the model's learning process. This clipping ensured that extreme values did not overly influence the model while retaining meaningful data followed by checking for Large Numerical values. After preprocessing, a regression model was trained to predict agricultural productivity (value-prod) using features such as fertilizer use, land use, and engineered variables like lagged productivity and interaction terms. The model's performance was evaluated using Mean Absolute Error (MAE) and R-squared metrics (R²). The Mean Absolute Error (MAE) of 102,387.80 indicates a relatively low average prediction error, suggesting that the model’s predictions are close to the actual values, especially if the productivity values are large. The R-squared (R²)value of 0.99 shows that the model explains 99 percentage of the variance in productivity, indicating an excellent fit. This high R² suggests that the model effectively captures the relationship between farm inputs (fertilizer and land use) and agricultural output.
+![alt text](<Code and outputs for Goal 1.png>)
+
+### Goal 2: Identify Sustainable Land Use Practices
+The main idea was to classify the land use practices as 'sustainable' and 'unsustainable'. The first step taken was to identify and remove the NaN values. The model was trained using Random Forest classifier. the model initially showed a high accuracy score, which raised concerns about potential overfitting. 
+![alt text](<Initial Code for Goal 2.png>)
+![alt text](<Output 1.png>)
+To address this and improve the model’s generalization ability, several steps were taken, Duplicate records were identified in both the training and test sets, which can introduce bias and affect model training. Removing these duplicates ensures that the model is trained on unique, relevant data. After handling the duplicates, the model was re-trained, and its performance was evaluated again. After removing duplicates and retraining the model, the accuracy reduced to a more realistic \textbf{0.52}. The model performed better at identifying unsustainable practices than sustainable ones, as seen in the classification report. The cross-validation scores showed slight fluctuations but remained consistent, suggesting the model’s performance is stable.
+![alt text](<Re-trained Model.png>)
+![alt text](<Output after re-training the model.png>)
+
+### Goal 3: Forecast Sustainable Agriculture Productivity
+To forecast sustainability for goal 3, the process began by preparing the dataset, ensuring the year column was converted to a datetime format for time-series modeling. The next step involved building a time-series forecasting model using historical productivity data. The model was optimized using the L-BFGS-B method, a widely used optimization technique for unconstrained problems, which minimized the loss function and fine-tuned the model parameters. After optimization, the historical and forecasted productivity values were plotted, with historical data shown in blue and forecasted data in red, to visually display the predictions over time. The forecast results were provided as predicted values for future years, offering insights into potential trends in agricultural productivity. 
+![alt text](<Code for Goal 3.png>)
+![alt text](Forcast.png)
