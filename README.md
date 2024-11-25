@@ -1,14 +1,15 @@
 # Data-Analytics-Capstone
 
-# Machine Learning Insights for Sustainable Agriculture: Land Use and Farm Inputs
+# Machine Learning for Sustainable Agriculture: Optimizing Land Use and Farm Inputs to Enhance Productivity and Sustainability
 * Author: Prabha Sapkota
 * GitHub: https://github.com/prabhasapkota/Data-Analytics-Capstone
 * Overleaf: https://www.overleaf.com/project/671945ef3b8ceee7ec59c2e3
 
 # Goals of the Research:
-The goal of this research is to leverage machine learning techniques on Global
-Food and Agricultural Statistics datasets to uncover insights into fertilizer application, land management and aiming to optimize agricultural productivity while promoting sustainable resource use and minimizing environmental impact.This research will use Kaggle datasets about the Global Food and Agriculture Statistics. This dataset was kindly published by the United Nation on the UNData
-site 
+The goal of this research is to leverage machine learning techniques on Global Food and Agricultural Statistics datasets to uncover insights into fertilizer application, land management and aiming to optimize agricultural productivity while promoting sustainable resource use and minimizing environmental impact.
+* The first goal is to Optimize Farm Input Usage Based on Observed Productivity Patterns.
+* The second goal is to Identify Sustainable Land Use Practices Through Historical Data Trends.
+* The final objective is to Forecast Sustainable Agricultural Productivity Using Machine Learning.
 
 # Phases of the Research
 ![alt text](<images/Phases of the Research.png>)
@@ -24,7 +25,7 @@ site
 * Once there, type jupyter lab in the terminal. If a browser does not automatically pop up, use CTRL + Click on the link provided.
 
 # Data Collection 
-Data was downloaded directly from Kaggle Datasets in csv format. You can find the original datasets here http://data.un.org/Explorer.aspx. The datasets are downloaded directly from Kaggle in csv format. Each file has a table format with rows and columns where each row represents a unique record and each column represents a different data attribute (e.g., country, year, element, value). After that, datatsets are uploaded in the VS Code and then pushed to GitHub repository.
+Data was downloaded directly from Kaggle Datasets in csv format. You can find the original datasets here http://data.un.org/Explorer.aspx. The datasets are downloaded directly from Kaggle in csv format. Each file has a table format with rows and columns where each row represents a unique record and each column represents a different data attribute (e.g., country, year, element, value). After that, datatsets are uploaded in the VS Code and then pushed to GitHub repository. 
 
 # Data Cleaning
 The three datasets i.e. Population indices, land and fertilizer had missing values in critical fields such year and value. I used the \verb|dropna()| method in pandas to remove rows with missing data. The value field is numerical and central to analysis for these three datasets, while year is essential for any temporal trends. Including rows with missing data in these fields could lead to incomplete or misleading analysis, so it’s safer to exclude them, which has been identified and removed by running Python script within VsCode. In addition to this, the year column is  set to an integer format across all datasets. Python script was ran to check for duplicate. Duplicates was found only for production datasets which was dropped. After handling the missing values, checking integer format and identifying and dropping duplicates, the  cleaned datasets has been saved separately as you can see in GitHub repository \url{https://github.com/prabhasapkota/Data-Analytics-Capstone}. 
