@@ -129,3 +129,22 @@ To address this and improve the model’s generalization ability, several steps 
 To forecast sustainability for goal 3, the process began by preparing the dataset, ensuring the year column was converted to a datetime format for time-series modeling. The next step involved building a time-series forecasting model using historical productivity data. The model was optimized using the L-BFGS-B method, a widely used optimization technique for unconstrained problems, which minimized the loss function and fine-tuned the model parameters. After optimization, the historical and forecasted productivity values were plotted, with historical data shown in blue and forecasted data in red, to visually display the predictions over time. The forecast results were provided as predicted values for future years, offering insights into potential trends in agricultural productivity. 
 ![alt text](<images/Code for Goal 3.png>)
 ![alt text](images/Forcast.png)
+
+## Visualization
+* Heatmap for Goal 1:The heatmap revealed the relationships between key variables like fertilizer use, land use, and productivity. Strong correlations were observed between land use and productivity, indicating land utilization significantly impacts productivity. Similarly, the interaction between fertilizer use and land use showed moderate correlations, highlighting their combined effect on agricultural outcomes.
+![alt text](<images/Heatmap for Goal 1.png>)
+
+* Histogram of Land Productivity for Goal 2:
+The histogram compared the distribution of land productivity for "sustainable" and "unsustainable" classifications. This visualization highlights the productivity gap between the two classifications and underscores the importance of sustainable practices.
+![alt text](<images/Goal 2.png>)
+
+* Time-Series Line Plot for Productivity Forecast for Goal 3:
+The time-series plot displayed historical productivity trends alongside forecasted values for the next 10 years. The historical data showed consistent growth in agricultural productivity, while the forecast projected a continued upward trend. The clear distinction between historical (blue line) and forecasted (red dashed line) values provides actionable insights for planning sustainable agricultural practices and policymaking.
+![alt text](<images/gOAL 3.png>)
+
+
+## Limitation:
+The models used for the FAO datasets provided helpful insights, but they also had some limitations. First, the data had missing or zero values for important variables like land use, fertilizer use, and productivity. This meant that we had to either fill in or remove these values, which could affect the accuracy of the model. The way we created new features, such as land productivity and fertilizer efficiency, might have simplified the problem too much, not considering other factors like weather or soil quality that can affect farming outcomes.
+The linear regression model used for forecasting assumes that the data follows a straight-line trend, but this might not always be true in agriculture, where trends can change in more complex ways. Also, the sustainability classification models used fixed thresholds, which may not work well in all regions with different farming practices.
+
+The models showed high accuracy, which could mean they fit the training data very well but may not perform as effectively with new, unseen data (a problem known as overfitting). Also, important factors like climate data, crop types, and socio-economic conditions were not included, which could have made the models more accurate and helpful. Finally, the time-series forecasts relied on simple trends, which might not have accounted for unexpected events like climate change or policy changes, making the predictions less reliable.
