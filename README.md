@@ -145,6 +145,39 @@ The time-series plot displayed historical productivity trends alongside forecast
 
 ## Limitation:
 The models used for the FAO datasets provided helpful insights, but they also had some limitations. First, the data had missing or zero values for important variables like land use, fertilizer use, and productivity. This meant that we had to either fill in or remove these values, which could affect the accuracy of the model. The way we created new features, such as land productivity and fertilizer efficiency, might have simplified the problem too much, not considering other factors like weather or soil quality that can affect farming outcomes.
+
 The linear regression model used for forecasting assumes that the data follows a straight-line trend, but this might not always be true in agriculture, where trends can change in more complex ways. Also, the sustainability classification models used fixed thresholds, which may not work well in all regions with different farming practices.
 
 The models showed high accuracy, which could mean they fit the training data very well but may not perform as effectively with new, unseen data (a problem known as overfitting). Also, important factors like climate data, crop types, and socio-economic conditions were not included, which could have made the models more accurate and helpful. Finally, the time-series forecasts relied on simple trends, which might not have accounted for unexpected events like climate change or policy changes, making the predictions less reliable.
+
+## Future Work
+Future investigation in Machine Learning for Sustainable Agriculture could focus on several areas. First, exploring how machine learning can help optimize land use by predicting the best ways to manage land for both productivity and sustainability. Next, studying how machine learning can improve farm input usage, such as fertilizers and water, to reduce waste and increase efficiency. Additionally, investigating how predictive models can help forecast crop yields and identify optimal farming practices based on weather patterns. Finally, exploring how machine learning can support real time decision making by analyzing data from sensors and satellites to monitor soil health, crop growth, and environmental conditions.
+
+## References
+1. https://www.nwmissouri.edu/login/
+2. Aggarwal, D., Bali, V., Mittal, S.: An insight into machine learning techniques
+for predictive analysis and feature selection. International Journal of Innovative
+Technology and Exploring Engineering 8(9), 342–349 (2019)
+3. Ara´ujo, S.O., Peres, R.S., Ramalho, J.C., Lidon, F., Barata, J.: Machine learn-
+ing applications in agriculture: current trends, challenges, and future perspectives.
+Agronomy 13(12), 2976 (2023)
+4. Chatfield, C.: Exploratory data analysis. European journal of operational research
+23(1), 5–13 (1986)
+5. Data, M.C., Komorowski, M., Marshall, D.C., Salciccioli, J.D., Crutain, Y.: Ex-
+ploratory data analysis. Secondary analysis of electronic health records pp. 185–203
+(2016)
+6. El-Kenawy, E.S.M., Alhussan, A.A., Khodadadi, N., Mirjalili, S., Eid, M.M.: Pre-
+dicting potato crop yield with machine learning and deep learning for sustainable
+agriculture. Potato Research pp. 1–34 (2024)
+7. Islam, M., Jin, S.: An overview of data visualization. In: 2019 International Confer-
+ence on Information Science and Communications Technologies (ICISCT). pp. 1–7.
+IEEE (2019)
+8. kaggle: Global food and agricultural statistics, https://www.kaggle.com/
+datasets/unitednations/global-food-agriculture-statistics/data?
+select=fao_data_production_indices_data.csv
+9. kaggle: Global food and agricultural statistics, https://www.kaggle.com/
+datasets/unitednations/global-food-agriculture-statistics?select=fao_
+data_fertilizers_data.csv
+10. kaggle: Global food and agricultural statistics, https://www.kaggle.com/
+datasets/unitednations/global-food-agriculture-statistics?select=fao_
+data_land_data.csv
