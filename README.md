@@ -7,9 +7,9 @@
 
 # Goals of the Research:
 The goal of this research is to leverage machine learning techniques on Global Food and Agricultural Statistics datasets to uncover insights into fertilizer application, land management and aiming to optimize agricultural productivity while promoting sustainable resource use and minimizing environmental impact.
-* The first goal is to Optimize Farm Input Usage Based on Observed Productivity Patterns.
-* The second goal is to Identify Sustainable Land Use Practices Through Historical Data Trends.
-* The final objective is to Forecast Sustainable Agricultural Productivity Using Machine Learning.
+* Optimize Farm Input Usage Based on Observed Productivity Patterns.
+* Identify Sustainable Land Use Practices Through Historical Data Trends.
+* Forecast Sustainable Agricultural Productivity Using Machine Learning.
 
 # Phases of the Research
 ![alt text](<images/Phases of the Research.png>)
@@ -33,7 +33,7 @@ Data was downloaded directly from Kaggle Datasets in csv format. You can find th
 3. https://www.kaggle.com/datasets/unitednations/global-food-agriculture-statistics?select=fao_data_production_indices_data.csv
 
 # Data Cleaning
-The three datasets i.e. Population indices, land and fertilizer had missing values in critical fields such year and value. I used the \verb|dropna()| method in pandas to remove rows with missing data. The value field is numerical and central to analysis for these three datasets, while year is essential for any temporal trends. Including rows with missing data in these fields could lead to incomplete or misleading analysis, so it’s safer to exclude them, which has been identified and removed by running Python script within VsCode. In addition to this, the year column is  set to an integer format across all datasets. Python script was ran to check for duplicate. Duplicates was found only for production datasets which was dropped. After handling the missing values, checking integer format and identifying and dropping duplicates, the  cleaned datasets has been saved separately as you can see in GitHub repository \url{https://github.com/prabhasapkota/Data-Analytics-Capstone}. 
+Data cleaning is a crucial step before any analysis. Three datasets i.e. Population indices, land and fertilizer had missing values in critical fields such year and value. I used the dropna() method in pandas to remove rows of missing data. The value field is numerical and central to analysis for these three datasets, while year is essential for any temporal trends. The missing data could result in incomplete or misleading analysis, so it’s better to exclude them. The python script in vscode was used to find and remove the missing values. In addition to this, the year column is  set to an integer format across all datasets. The python script were ran to check for duplicates which were found only for production datasets and then dropped. After handling the missing values, checking integer format and identifying and dropping duplicates, the  cleaned datasets has been saved separately as you can see in github repository {https://github.com/prabhasapkota/Data-Analytics-Capstone}. 
 ![alt text](images/Production_indices.png)
 ![alt text](images/land_data.png)
 ![alt text](images/fertilizers_data.png)
@@ -45,7 +45,7 @@ After the cleaning process the three datasets has following rows and columns:
 * Production datasets: 311634 rows and 8 columns
 
 # Exploratory Data Analysis
-The EDA for this project was performed at Jupyter Notebook within VS Code which can be found at \url{http://localhost:8888/lab/workspaces/auto-V/tree/capstone.ipynb}. The cleaned datasets was loaded in the notebook and following steps were carried out.
+The exploratory data analysis (EDA) for this project was done in Jupyter Notebook within vscode, accessible at {http://localhost:8888/lab/workspaces/auto-V/tree/capstone.ipynb}. The cleaned datasets were uploaded to the notebook, and the following steps were performed.
 
 ## Initial Data Inspection
 The initial data inspection was conducted to quickly understand the structure , contents and quality of each dataset. For this  each dataset was loaded, checked the first few rows (\verb|head()|), data types, and column names, Assessed the dataset dimensions (number of rows and columns) to get a sense of the dataset size and Identified missing values in each column and calculated missing value counts to understand potential data quality issues. 
@@ -114,7 +114,7 @@ Predictive Analysis was carried out by performing following steps:
 
 ### Goal 1: Optimize Farm Input Usage
 Used a regression model to predict productivity based on fertilizer and land use.
-Prior to use a regressison model merged datasets was checked for NaN or infinite values, and NaNs were filled with the median value of each column. Then values were clipped to a reasonable range to address any outliers or excessively large values that could distort the model's learning process. This clipping ensured that extreme values did not overly influence the model while retaining meaningful data followed by checking for Large Numerical values. After preprocessing, a regression model was trained to predict agricultural productivity (value-prod) using features such as fertilizer use, land use, and engineered variables like lagged productivity and interaction terms. The model's performance was evaluated using Mean Absolute Error (MAE) and R-squared metrics (R²). The Mean Absolute Error (MAE) of 102,387.80 indicates a relatively low average prediction error, suggesting that the model’s predictions are close to the actual values, especially if the productivity values are large. The R-squared (R²)value of 0.99 shows that the model explains 99 percentage of the variance in productivity, indicating an excellent fit. This high R² suggests that the model effectively captures the relationship between farm inputs (fertilizer and land use) and agricultural output.
+Prior to use a regresison model merged datasets was checked for NaN or infinite values, and NaNs were filled with the median value of each column. Then values were clipped to a reasonable range to address any outliers or excessively large values that could distort the model's learning process. This clipping ensured that extreme values did not overly influence the model while retaining meaningful data followed by checking for Large Numerical values. After preprocessing, a regression model was trained to predict agricultural productivity (value-prod) using features such as fertilizer use, land use, and engineered variables like lagged productivity and interaction terms. The performance of the model was assessed using Mean Absolute Error (MAE) and R-squared (R²). The MAE of 102,387.80, means the model’s predictions are usually close to actual values, especially when productivity is high. The R² value of 0.99 shows the model explains 99\% of the changes in productivity, meaning it fits the data very well. This high R² suggests the model accurately shows how farm inputs (like fertilizer and land use) effect agricultural output.
 ![alt text](<images/Code and outputs for Goal 1.png>)
 
 ### Goal 2: Identify Sustainable Land Use Practices
@@ -131,6 +131,7 @@ To forecast sustainability for goal 3, the process began by preparing the datase
 ![alt text](images/Forcast.png)
 
 ## Visualization
+Using graphs to present numbers is a great way to tell a story with data. Data visualizations make large or small sets of information easier for the human brain to understand and interpret.
 * Heatmap for Goal 1:The heatmap revealed the relationships between key variables like fertilizer use, land use, and productivity. Strong correlations were observed between land use and productivity, indicating land utilization significantly impacts productivity. Similarly, the interaction between fertilizer use and land use showed moderate correlations, highlighting their combined effect on agricultural outcomes.
 ![alt text](<images/Heatmap for Goal 1.png>)
 
@@ -142,13 +143,21 @@ The histogram compared the distribution of land productivity for "sustainable" a
 The time-series plot displayed historical productivity trends alongside forecasted values for the next 10 years. The historical data showed consistent growth in agricultural productivity, while the forecast projected a continued upward trend. The clear distinction between historical (blue line) and forecasted (red dashed line) values provides actionable insights for planning sustainable agricultural practices and policymaking.
 ![alt text](<images/gOAL 3.png>)
 
+## Conclusion
+1. Optimize Farm Input Usage based on productivity patterns
+Analysis revealed efficient use of fertilizers and land significantly improves productivity, indicating that efficient land management significantly impacts output. However, overuse can lead to diminishing returns and environmental harm, emphasizing the need for optimized resource allocation.
+2. Identify Sustainable Land Use Practices Through Historical Data Trends
+Historical data revealed significant differences in land use efficiency across regions. Categorizing practices as "sustainable" or "unsustainable" showed that sustainable methods tend to deliver higher long-term productivity and environmental advantages. However, the Random Forest classifier's moderate accuracy indicates a need for further improvement to ensure the model's applicability across diverse regions.
+3. Forecast Sustainable Agricultural Productivity Using Machine Learning
+The historical data showed notable inconsistencies, including missing values and extreme fluctuations, which likely impacted the model’s accuracy and reliability. Despite these issues, the time-series forecasting model indicated a steady upward trend in productivity, offering a general outlook on future performance. However, the dependency on incomplete and noisy data highlights the critical need for improved data collection and pre-processing to enhance forecast accuracy and practical applicability.
+
 
 ## Limitation:
 The models used for the FAO datasets provided helpful insights, but they also had some limitations. First, the data had missing or zero values for important variables like land use, fertilizer use, and productivity. This meant that we had to either fill in or remove these values, which could affect the accuracy of the model. The way we created new features, such as land productivity and fertilizer efficiency, might have simplified the problem too much, not considering other factors like weather or soil quality that can affect farming outcomes.
 
 The linear regression model used for forecasting assumes that the data follows a straight-line trend, but this might not always be true in agriculture, where trends can change in more complex ways. Also, the sustainability classification models used fixed thresholds, which may not work well in all regions with different farming practices.
 
-The models showed high accuracy, which could mean they fit the training data very well but may not perform as effectively with new, unseen data (a problem known as overfitting). Also, important factors like climate data, crop types, and socio-economic conditions were not included, which could have made the models more accurate and helpful. Finally, the time-series forecasts relied on simple trends, which might not have accounted for unexpected events like climate change or policy changes, making the predictions less reliable.
+The models showed high accuracy, which could mean they fit the training data very well but may not perform as effectively with new, unseen data (a problem known as overfitting). Also, important factors like climate data, crop types, and socio-economic conditions were not included, which could have made the models more accurate and helpful. Finally, the time-series forecasts relied on the historical data with notable inconsistencies which likely impacted the model’s accuracy and reliability. 
 
 ## Future Work
 Future investigation in Machine Learning for Sustainable Agriculture could focus on several areas. First, exploring how machine learning can help optimize land use by predicting the best ways to manage land for both productivity and sustainability. Next, studying how machine learning can improve farm input usage, such as fertilizers and water, to reduce waste and increase efficiency. Additionally, investigating how predictive models can help forecast crop yields and identify optimal farming practices based on weather patterns. Finally, exploring how machine learning can support real time decision making by analyzing data from sensors and satellites to monitor soil health, crop growth, and environmental conditions.
