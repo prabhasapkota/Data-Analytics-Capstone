@@ -123,6 +123,8 @@ To address this and improve the model’s generalization ability, several steps 
 To forecast sustainability for goal 3, the process began by preparing the dataset, ensuring the year column was converted to a datetime format for time-series modeling. The next step involved building a time-series forecasting model using historical productivity data. The model was optimized using the L-BFGS-B method, a widely used optimization technique for unconstrained problems, which minimized the loss function and fine-tuned the model parameters. After optimization, the historical and forecasted productivity values were plotted, with historical data shown in blue and forecasted data in red, to visually display the predictions over time. The forecast results were provided as predicted values for future years, offering insights into potential trends in agricultural productivity. 
 ![alt text](<images/Code for Goal 3.png>)
 ![alt text](images/Forcast.png)
+* Historical Data Analysis: The graph visualizes past agricultural productivity trends, highlighting inconsistencies that may influence the model's ability to accurately capture patterns.
+* Forecasting Component: The red line represents the model's forecast, providing a forward-looking view of agricultural productivity. Despite the irregularities in historical data, the forecast predicts a relatively stable trend.
 
 ## Visualization
 Using graphs to present numbers is a great way to tell a story with data. Data visualizations make large or small sets of information easier for the human brain to understand and interpret.
@@ -138,11 +140,11 @@ The time-series plot displayed historical productivity trends alongside forecast
 ![alt text](<images/gOAL 3.png>)
 
 ## Conclusion
-1. Optimize Farm Input Usage based on productivity patterns
+1. Optimize Farm Input Usage based on productivity patterns:
 Analysis revealed efficient use of fertilizers and land significantly improves productivity, indicating that efficient land management significantly impacts output. However, overuse can lead to diminishing returns and environmental harm, emphasizing the need for optimized resource allocation.
-2. Identify Sustainable Land Use Practices Through Historical Data Trends
+2. Identify Sustainable Land Use Practices Through Historical Data Trends:
 Historical data revealed significant differences in land use efficiency across regions. Categorizing practices as "sustainable" or "unsustainable" showed that sustainable methods tend to deliver higher long-term productivity and environmental advantages. However, the Random Forest classifier's moderate accuracy indicates a need for further improvement to ensure the model's applicability across diverse regions.
-3. Forecast Sustainable Agricultural Productivity Using Machine Learning
+3. Forecast Sustainable Agricultural Productivity Using Machine Learning:
 The historical data showed notable inconsistencies, including missing values and extreme fluctuations, which likely impacted the model’s accuracy and reliability. Despite these issues, the time-series forecasting model indicated a steady upward trend in productivity, offering a general outlook on future performance. However, the dependency on incomplete and noisy data highlights the critical need for improved data collection and pre-processing to enhance forecast accuracy and practical applicability.
 
 
