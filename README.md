@@ -5,6 +5,12 @@
 * GitHub: https://github.com/prabhasapkota/Data-Analytics-Capstone
 * Overleaf: https://www.overleaf.com/project/671945ef3b8ceee7ec59c2e3
 
+
+# Abstract
+This goal of this project was to analyze and forecast agricultural productivity using three key datasets from the Food and Agriculture Organization (FAO): production indices, land use, and fertilizer use. The goal was to provide insights into optimizing farm input usage, identifying sustainable land use practices, and forecasting future agricultural productivity. The data was preprocessed to address missing values, normalize features, and engineer relevant variables like land productivity and fertilizer efficiency. Machine learning models, including regression and classification techniques, were employed to predict sustainability and forecast future trends.
+The findings from this project highlights the importance of optimizing farm input usage and adopting sustainable land use practices to improve agricultural productivity. While the forecasting model demonstrated an overall upward trend in productivity, data inconsistencies and the exclusion of key variables, such as climate and socio-economic factors, limited the model's full potential. The moderate accuracy of the sustainability classification model highlighted the need for further refinement and more comprehensive data.
+While the models produced valuable insights, several limitations were identified. Data quality issues, such as missing or zero values, could affect model accuracy. The models also assumed linear relationships and relied on simplified feature engineering, potentially overlooking the complexity of agricultural systems. Additionally, the models did not account for critical factors like climate, crop types, and socio-economic conditions, which could have improved the accuracy and robustness of the predictions. Despite these challenges, the project provided a useful foundation for understanding the factors influencing agricultural productivity and sustainability, with potential applications in policy-making and farming practices.
+
 # Goals of the Research:
 The goal of this research is to leverage machine learning techniques on Global Food and Agricultural Statistics datasets to uncover insights into fertilizer application, land management and aiming to optimize agricultural productivity while promoting sustainable resource use and minimizing environmental impact.
 * Optimize Farm Input Usage Based on Observed Productivity Patterns.
@@ -88,18 +94,6 @@ Fertilizer use varies significantly by country and category. Nitrogen-based fert
 There’s a noticeable increase in fertilizer usage in emerging economies over the analyzed period, potentially driving productivity gains. Outlier analysis identified certain countries with extreme levels of fertilizer application, warranting further investigation.
 ![alt text](<images/Visualizations for Fertilizer Datasets.png>)
 
-* Visual Presentation Highlights:
-The EDA was supported by impactful visualizations that reveal the underlying structure of the data.
-* Line Plots
-Time-series visualizations of fertilizer usage and production indices showcased trends and seasonality. Adjustments to x-axis ticks ensured clarity for datasets with extensive temporal data.
-* Bar Charts
-Categorical distributions revealed the dominance of specific categories, such as "Crops" in production indices and "Agricultural Land" in land use.
-* Box Plots
-Insights into variations across countries highlighted disparities in land use efficiency, fertilizer application, and production capabilities.
-* Story Telling
-The findings from the EDA were contextualized within the broader narrative of sustainable agriculture: 
-Patterns in land use and fertilizer application point to opportunities for policy interventions to minimize waste and improve sustainability.
-Temporal trends highlight the impact of global efforts to enhance agricultural efficiency through technological advancements and resource management.
 
 ## Predictive Analysis
 Predictive Analysis was carried out by performing following steps:
@@ -160,7 +154,8 @@ The linear regression model used for forecasting assumes that the data follows a
 The models showed high accuracy, which could mean they fit the training data very well but may not perform as effectively with new, unseen data (a problem known as overfitting). Also, important factors like climate data, crop types, and socio-economic conditions were not included, which could have made the models more accurate and helpful. Finally, the time-series forecasts relied on the historical data with notable inconsistencies which likely impacted the model’s accuracy and reliability. 
 
 ## Future Work
-Future investigation in Machine Learning for Sustainable Agriculture could focus on several areas. First, exploring how machine learning can help optimize land use by predicting the best ways to manage land for both productivity and sustainability. Next, studying how machine learning can improve farm input usage, such as fertilizers and water, to reduce waste and increase efficiency. Additionally, investigating how predictive models can help forecast crop yields and identify optimal farming practices based on weather patterns. Finally, exploring how machine learning can support real time decision making by analyzing data from sensors and satellites to monitor soil health, crop growth, and environmental conditions.
+Future work should focus on improving data quality by addressing missing values and outliers, incorporating external factors like climate, soil health, and socio-economic conditions for more accurate predictions. The good qulaity of datasets can be studied in various ways.  First, exploring how machine learning can help optimize land use by predicting the best ways to manage land for both productivity and sustainability. Next, studying how machine learning can improve farm input usage, such as fertilizers and water, to reduce waste and increase efficiency. Additionally, investigating how predictive models can help forecast crop yields and identify optimal farming practices based on weather patterns. Finally, exploring how machine learning can support real time decision making by analyzing data from sensors and satellites to monitor soil health, crop growth, and environmental conditions.
+
 
 ## References
 1. https://www.nwmissouri.edu/login/
